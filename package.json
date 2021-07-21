@@ -1,0 +1,92 @@
+{
+  "name": "appnamehere",
+  "version": "0.0.1",
+  "private": true,
+  "description": "My electron app",
+  "author": "André Weller <info@lost.design> (https://lost.design/)",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build:all": "yarn run build:osx && yarn run build:win && yarn run build:linux",
+    "build:linux": "yarn electron:build -p never -- --linux",
+    "build:osx": "yarn electron:build -p never",
+    "build:win": "yarn electron:build -p never -- --win  --x64 --ia32",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:icon": "electron-icon-builder --input=./appIcon/icon.png --output=./build --flatten",
+    "electron:serve": "vue-cli-service electron:serve",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps",
+    "publish:all": "yarn run publish:osx && yarn run publish:win && yarn run publish:linux",
+    "publish:linux": "yarn electron:build -- --linux -p always",
+    "publish:osx": "yarn electron:build -p always",
+    "publish:win": "yarn electron:build -- --win  --x64 --ia32 -p always"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "@sentry/electron": "2.0.0",
+    "core-js": "3.6.5",
+    "electron-store": "6.0.0",
+    "electron-updater": "4.3.4",
+    "vue": "2.6.11",
+    "vue-i18n": "8.24.4",
+    "vue-router": "3.2.0",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "2.0.4",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "autoprefixer": "9",
+    "babel-eslint": "10.1.0",
+    "dotenv": "8.2.0",
+    "electron": "12.0.1",
+    "electron-builder": "22.11.4",
+    "electron-devtools-installer": "3.1.1",
+    "electron-icon-builder": "1.0.2",
+    "electron-notarize": "1.0.0",
+    "eslint": "6.7.2",
+    "eslint-plugin-vue": "6.2.2",
+    "postcss": "7",
+    "prompts": "2.3.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vue-cli-plugin-electron-builder": "~2.0.0-rc.4",
+    "vue-cli-plugin-i18n": "~2.1.1",
+    "vue-svg-loader": "0.17.0-beta.2",
+    "vue-template-compiler": "2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "globals": {
+      "__static": "readable",
+      "mainStorage": "writable"
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "keywords": [
+    "journal",
+    "calendar"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lostdesign/appnamehere"
+  }
+}

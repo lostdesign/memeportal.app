@@ -1,0 +1,65 @@
+name: Build/release
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+      - 'fix/**'
+    tags:
+      - '*'
+
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v1
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15
+
+      - name: Build/release Electron app
+        uses: samuelmeuli/action-electron-builder@v1
+        continue-on-error: true
+        env:
+          APPLE_ID: ${{secrets.APPLE_ID}}
+          APPLE_ID_PASSWORD: ${{secrets.APPLE_ID_PASSWORD}}
+        with:
+          mac_certs: ${{ secrets.CSC_LINK }}
+          mac_certs_password: ${{ secrets.CSC_KEY_PASSWORD }}
+
+          skip_build: true
+          use_vue_cli: true
+
+          # GitHub token, automatically provided to the action
+          # (No need to define this secret in the repo settings)
+          github_token: ${{ secrets.github_token }}
+
+          # If the commit is tagged with a version (e.g. "v1.0.0"),
+          # release the app after building
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+
+      - name: Archive build artifacts for each os
+        uses: actions/upload-artifact@v2
+        with:
+          name: all-os-built-executables
+          retention-days: 1
+          path: |
+            dist_electron
+            !dist_electron/bundled/*
+            !dist_electron/mac/*
+            !dist_electron/builder*
+            !dist_electron/index.js
+            !dist_electron/package.json
+            !dist_electron/.icon-icns/*
+            !dist_electron/win-unpacked/*
+            !dist_electron/linux-unpacked/*
+            !dist_electron/latest*
+            !dist_electron/*.blockmap
