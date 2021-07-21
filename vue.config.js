@@ -31,7 +31,7 @@ module.exports = {
           target: ['nsis', 'portable']
         },
         publish: ['github'],
-        appId: 'design.lost.appnamehere',
+        appId: 'design.lost.memeportal.app',
         afterSign: './afterSignHook.js'
       }
     },

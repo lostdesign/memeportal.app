@@ -12,7 +12,7 @@ module.exports = async function(params) {
 
   console.log('afterSign hook triggered', params)
 
-  let appId = 'design.lost.appnamehere'
+  let appId = 'design.lost.memeportal.app'
 
   let appPath = path.join(
     params.appOutDir,

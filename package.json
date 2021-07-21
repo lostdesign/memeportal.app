@@ -1,5 +1,5 @@
 {
-  "name": "appnamehere",
+  "name": "memeportal.app",
   "version": "0.0.1",
   "private": true,
   "description": "My electron app",
@@ -87,6 +87,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lostdesign/appnamehere"
+    "url": "https://github.com/lostdesign/memeportal.app"
   }
 }

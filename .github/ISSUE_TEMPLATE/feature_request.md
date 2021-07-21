@@ -6,4 +6,4 @@ labels: ''
 assignees: ''
 ---
 
-Please go here and add the feature request there instead: https://github.com/lostdesign/appnamehere/discussions
+Please go here and add the feature request there instead: https://github.com/lostdesign/memeportal.app/discussions

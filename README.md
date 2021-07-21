@@ -1,13 +1,9 @@
-This is a template using vue and tailwind to build electron apps. Please search across the project for `appnamehere` in order to set your own app name as well as replacing the author, which currently is `lostdesign` - several references should replaces with your own account.
-
-
-
 ![Project Status](https://img.shields.io/badge/🏷-v0.0.1-green)
 
 
-{{ DESCRIPTION HERE }}
+The app for your daily memeportal conversations.
 
-**[You can download appnamehere here for free!](https://github.com/lostdesign/appnamehere/releases/latest)**
+**[You can download memeportal.app here for free!](https://github.com/lostdesign/memeportal.app/releases/latest)**
 
 
 ## 💖 Sponsor
@@ -30,7 +26,7 @@ Please check [Contributing.md](/CONTRIBUTING.md) first before opening a pull req
   2. Clone the repository
 
   ```
-  git clone https://github.com/lostdesign/appnamehere.git
+  git clone https://github.com/lostdesign/memeportal.app.git
   ```
 
   3. Install project dependencies

@@ -24,7 +24,7 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
- - appnamehere version: [e.g. 1.0.0]
+ - memeportal.app version: [e.g. 1.0.0]
  - operating system [e.g. macOS Catalina XX.XX, windows 10]
 
 **Smartphone (please complete the following information):**

@@ -67,57 +67,13 @@ const template = [
     ]
   },
   {
-    label: 'View',
-    submenu: [
-      {
-        label: 'Today',
-        click() {
-          win.webContents.send('set-today')
-        },
-        accelerator: 'CommandOrControl + .'
-      },
-      { type: 'separator' },
-      {
-        label: 'Previous Day',
-        click() {
-          win.webContents.send('previous-day')
-        },
-        accelerator: 'CommandOrControl + P'
-      },
-      {
-        label: 'Next Day',
-        click() {
-          win.webContents.send('next-day')
-        },
-        accelerator: 'CommandOrControl + N'
-      },
-      { type: 'separator' },
-      {
-        label: 'Previous Week',
-        click() {
-          win.webContents.send('previous-week')
-        },
-        accelerator: 'CommandOrControl + Shift + P'
-      },
-      {
-        label: 'Next Week',
-        click() {
-          win.webContents.send('next-week')
-        },
-        accelerator: 'CommandOrControl + Shift + N'
-      },
-      { type: 'separator' },
-      { role: 'reload' }
-    ]
-  },
-  {
     role: 'help',
     submenu: [
       {
         label: 'Documentation',
         click: async () => {
           const { shell } = require('electron')
-          await shell.openExternal('https://appnamehere.com/docs')
+          await shell.openExternal('https://memeportal.app.com/docs')
         }
       }
     ]
@@ -135,8 +91,8 @@ function createWindow() {
     maxWidth: 450,
     height: 450,
     minHeight: 450,
-    title: 'appnamehere',
-    backgroundColor: '#161616',
+    title: 'memeportal.app',
+    backgroundColor: '#000',
     webPreferences: {
       devTools: process.env.NODE_ENV === 'development',
       nodeIntegration: true,
