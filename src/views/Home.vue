@@ -1,8 +1,13 @@
 <template>
-  <h1 class="text-white">hello world</h1>
+  <main class="p-4">
+    <text-generator/>
+  </main>
 </template>
 
 <script>
+import TextGenerator from '@/components/text-generator'
+
 export default {
+  components: { TextGenerator }
 }
 </script>
