@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <input v-model="value" @click="" class="mt-4 w-full bg-gray-900 focus:outline-none focus:ring-gray-800 focus:ring-2 rounded py-1 px-2 text-white" />
+    <input v-model="value" class="mt-4 w-full bg-gray-900 focus:outline-none focus:ring-gray-800 focus:ring-2 rounded py-1 px-2 text-white" />
   </section>
 </template>
 

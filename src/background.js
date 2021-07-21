@@ -86,11 +86,11 @@ Menu.setApplicationMenu(menu)
 function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
-    width: 450,
+    width: 550,
     minWidth: 450,
-    maxWidth: 450,
-    height: 450,
-    minHeight: 450,
+    maxWidth: 550,
+    height: 300,
+    minHeight: 300,
     title: 'memeportal.app',
     backgroundColor: '#000',
     webPreferences: {
