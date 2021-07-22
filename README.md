@@ -1,4 +1,4 @@
-![Project Status](https://img.shields.io/badge/🏷-v0.0.1-green)
+![Project Status](https://img.shields.io/badge/🏷-v0.0.2-alpha-green)
 
 
 The app for your daily memeportal conversations.

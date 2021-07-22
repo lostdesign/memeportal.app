@@ -1,6 +1,6 @@
 {
   "name": "memeportal.app",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "private": true,
   "description": "My electron app",
   "author": "André Weller <info@lost.design> (https://lost.design/)",
